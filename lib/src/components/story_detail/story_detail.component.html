@@ -1,0 +1,65 @@
+<div class="header" [style.background-image]="'url(' + story.imageUrl + ')'">
+  <div class="title">{{story.title}}</div>
+  <span class="host">by.{{story.hostName}}</span>
+</div>
+
+<div class="layout">
+  <section class="content">
+    <div class="content-section-tab">
+      <div class="active">Info</div>
+      <div>Media</div>
+      <div>기부자 현황</div>
+    </div>
+    <div class="description">
+      {{story.description}}
+    </div>
+  </section>
+  <div class="metadata">
+    <section class="scoreboard">
+      <div class="dday">D-28</div>
+      <div class="current">
+        <span>{{story.current}}</span>
+        <span>ETH</span>
+      </div>
+      <material-progress [activeProgress]="story.current" [max]="story.goal">
+      </material-progress>
+      <table>
+        <tr>
+          <td>목표 금액</td>
+          <td>{{story.goal}} ETH</td>
+        </tr>
+      </table>
+      <material-button raised compact style="width: 100%" (click)="onClickDonate($event, story)">
+        후원하기
+      </material-button>
+    </section>
+    <section class="detail">
+      <table>
+        <tr>
+          <td>총 모금액</td>
+          <td>{{story.current}} ETH</td>
+        </tr>
+        <tr>
+          <td>모금후기 등록률</td>
+          <td>90%</td>
+        </tr>
+        <tr>
+          <td>현재 정기기부자</td>
+          <td>14명</td>
+        </tr>
+        <tr>
+          <td>기부금 공제 구분</td>
+          <td>지정기부금</td>
+        </tr>
+        <tr>
+          <td>후원금 이용내역</td>
+          <td>
+            <a href="https://ropsten.etherscan.io/address/{{story.accountId}}" target="_blank">
+              조회하기
+            </a>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>

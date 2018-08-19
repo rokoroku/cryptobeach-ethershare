@@ -1,0 +1,6 @@
+.stories {
+  display: inline-grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 24px;
+  grid-template-columns: auto auto auto auto;
+}

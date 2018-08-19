@@ -1,0 +1,25 @@
+:host {
+  .circle {
+    line-height: 0;
+    display: inline-block;
+    border: 2px solid rgba(200, 200, 200, 0.4);
+    border-radius: 50%;
+    transition: linear 0.25s;
+    height: 34px;
+    width: 34px;
+  }
+  .circle img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .circle:hover {
+    transition: ease-out 0.2s;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: ease-out 0.2s;
+  }
+
+  .circle.active {
+    border: 2px solid #eb8e7c !important;
+  }
+}

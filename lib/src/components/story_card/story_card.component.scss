@@ -1,0 +1,49 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_progress/mixins';
+
+.story {
+  width: 200px;
+  height: 342px;
+  border-radius: 2px;
+  border: solid 0.5px #cdd4db;
+  cursor: pointer;
+
+  img {
+    width: 200px;
+    height: 160px;
+    border-radius: 2px;
+  }
+
+
+  .info {
+    padding: 16px;
+    font-size: 14px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+
+    @include material-progress-theme($indeterminate-color: #f1f3f5, $active-color: #eb8e7c, $secondary-color: #f1f3f5);
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .hostName {
+      color: #848e97;
+      margin-bottom: 3px;
+    }
+    .percent {
+      color: #eb8e7c;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .line {
+      width: 168px;
+      height: 0.5px;
+      border: solid 0.5px #cdd4db;
+    }
+    .meta {
+      margin: 0;
+    }
+  }
+}

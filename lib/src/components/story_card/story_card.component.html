@@ -1,0 +1,18 @@
+<div
+  class="story"
+  (click)="navigateToDetail()"
+>
+  <img src="{{story.imageUrl}}">
+  <div class="info">
+    <div class="title">{{story.title}}</div>
+    <div class="hostName">{{story.hostName}}</div>
+    <material-progress [activeProgress]="story.current" [max]="story.goal">
+    </material-progress>
+    <div class="percent">{{story.current/story.goal*100}}%</div>
+    <div class="line"></div>
+    <div class="meta">
+      <div class="goal">{{story.goal}}ETH</div>
+      <div class="dday">{{dday}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_tab/mixins';
+
+:host {
+  > div {
+    height: 70px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .navigation_tab {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      max-width: 420px;
+      align-self: center;
+      justify-self: center;
+    }
+
+    tab-button {
+      height: 70px !important;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  tab-button {
+    height: 70px;
+  }
+
+  .login_button {
+    width: 84px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #eb8e7c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > span {
+      padding: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin: 8px;
+      color: grey;
+      font-size: 28px !important;
+    }
+
+  }
+}
+
+// Custom Tab styles
+@include tab-strip-color('app-header', $mat-gray-700, #eb8e7c);
+@include tab-strip-selected-tab-color('app-header', #eb8e7c);

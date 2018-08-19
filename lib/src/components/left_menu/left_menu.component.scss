@@ -1,0 +1,52 @@
+.leftMenu {
+  width: 247px;
+  border: solid 1px #dde2e6;
+
+  .userInfo {
+    padding: 23px;
+    height: 200px;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    img {
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+    }
+
+    .displayName {
+      margin-top: 23px;
+      font-weight: bold;
+    }
+    .coinbase {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #848e97;
+    }
+  }
+  .menu {
+    padding: 32px;
+    height: 545px;
+    border-top: solid 1px #dde2e6;
+    background-color: #f8f9fa;
+
+    .category {
+      margin-bottom: 32px;
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 17px;
+      }
+      .menu {
+        font-size: 14px;
+      }
+      .selected {
+        font-weight: bold;
+      }
+    }
+  }
+}

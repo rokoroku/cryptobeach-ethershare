@@ -1,0 +1,19 @@
+:host {
+  > div {
+    height: 240px;
+    background-color: #f1f3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+
+    > img {
+      align-self: flex-end;
+      margin-right: 32px;
+    }
+
+    > span {
+      align-self: center;
+    }
+  }
+}

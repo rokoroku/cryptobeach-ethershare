@@ -1,0 +1,24 @@
+<div class="leftMenu" *ngIf="user != null">
+  <div class="userInfo">
+    <img src="{{user.avatar}}">
+    <div class="displayName">{{user.displayName}}</div>
+    <div class="coinbase">{{user.coinbase}}</div>
+  </div>
+  <div class="menu">
+    <div class="category">
+      <div class="title">나의 후원활동</div>
+      <div class="menu selected">후원 목록</div>
+      <div class="menu">정기 후원 관리</div>
+    </div>
+    <div class="category">
+      <div class="title">나의 정보</div>
+      <div class="menu">지갑 정보 확인</div>
+      <div class="menu">내 정보 수정</div>
+    </div>
+    <div class="category">
+      <div class="title">고객 센터</div>
+      <div class="menu">나의 문의 내역</div>
+      <div class="menu">1:1 채팅 문의하기</div>
+    </div>
+  </div>
+</div>

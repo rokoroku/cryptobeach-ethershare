@@ -1,0 +1,150 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_progress/mixins';
+@import 'package:angular_components/material_button/mixins';
+
+@mixin colorize($selector, $color) {
+  $raised: $selector + '[raised]';
+  @include button-background-color($raised, $color);
+  @include button-color($raised, $mat-white);
+
+  $not-raised: $selector + ':not([raised])';
+  @include button-color($not-raised, $color);
+}
+
+:host {
+  .header {
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #333a41;
+    background-size: 100% auto;
+    background-origin: unset;
+    background-position: center;
+
+    .title {
+      font-size: 32px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .host {
+      opacity: 0.5;
+      font-size: 16px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  .layout {
+    display: flex;
+
+    .content {
+      flex-grow: 1;
+      padding: 32px;
+      border-right: 1px solid #dde2e6;
+    }
+
+    .metadata {
+      flex-shrink: 1;
+    }
+  }
+
+  .content-section-tab {
+    margin-bottom: 38px;
+    display: flex;
+
+    > div {
+      min-width: 80px;
+      padding: 4px 2px;
+      height: 24px;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #abb5be;
+    }
+
+    > div.active {
+      border-radius: 4px;
+      background-color: #233047;
+    }
+    > div:not(:first-child) {
+      margin-left: 5px;
+    }
+    > div:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #333a41;
+    overflow-y: auto;
+  }
+
+  .metadata {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    
+    @include material-progress-theme($indeterminate-color: #f1f3f5, $active-color: #eb8e7c, $secondary-color: #f1f3f5);
+    @include colorize('material-button', #eb8e7c);
+
+    .scoreboard {
+      padding: 32px;
+      border-bottom: 1px solid #dde2e6;
+      > *:not(:first-child) {
+        margin-top: 4px;
+      }
+      > *:not(:last-child) {
+        margin-bottom: 4px;
+      }
+      .dday {
+        font-size: 20px;
+        font-weight: bold;
+        color: #eb8e7c;
+      }
+      .current {
+        color: #333a41;
+
+        span:first-child {
+          font-size: 32px;
+          font-weight: bold;
+        }
+        span:last-child {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .detail {
+      padding: 32px;
+    }
+
+    table {
+      width: 100%;
+    }
+    table > tr {
+      td {
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: #333a41;
+      }
+      td:first-child {
+        color: #848e97 !important;
+        font-weight: normal;
+      }
+    }
+  }
+}

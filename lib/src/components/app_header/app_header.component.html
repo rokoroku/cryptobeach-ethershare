@@ -1,0 +1,15 @@
+<div>
+  <img class="logo" src="img/common-logo-ic.svg" (click)="navigateToRoot()"/>
+  <section class="navigation_tab">
+    <material-tab-strip [activeTabIndex]="tabIndex" style="min-width: 72px;" (tabChange)="onTabChange($event)" [tabLabels]="tabLabels">
+    </material-tab-strip>
+  </section>
+
+  <div *ngIf="user == null" class="login_button" (click)="authenticate()">
+    <span>로그인하기</span>
+  </div>
+  <div class="user" *ngIf="user != null">
+    <material-icon class="icon" icon="notifications_none" light></material-icon>
+    <avatar class="avatar" [active]="tabIndex == -1" [user]="user" (click)="navigateToMyPage()"></avatar>
+  </div>
+</div>
